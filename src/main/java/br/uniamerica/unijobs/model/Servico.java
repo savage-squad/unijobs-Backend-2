@@ -6,7 +6,7 @@ public class Servico extends Anuncio{
 	private Integer id;
 	private TipoServico tipoServico;
 	
-	public Servico() {
+	public Servico(int anInt, String string, String rsString, double aDouble, double rsDouble, boolean aBoolean) {
 	
 	}
 
@@ -14,6 +14,10 @@ public class Servico extends Anuncio{
 		super(id, usuario, titulo, descricao, preco, miniatura, ativo, avaliacoes, imagens);
 		this.id = id1;
 		this.tipoServico = tipoServico;
+	}
+
+	public Servico() {
+
 	}
 
 	public Integer getId() {
