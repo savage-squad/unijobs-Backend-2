@@ -10,6 +10,7 @@ public class Anuncio {
 	private Double preco;
 	private String miniatura;
 	private Boolean ativo;
+	private Integer prazo;
 	private ArrayList<Avaliacao> avaliacoes;
 	private ArrayList<Imagem> imagens;
 
@@ -17,7 +18,31 @@ public class Anuncio {
 	}
 
 	public Anuncio(Integer id, Usuario usuario, String titulo, String descricao, Double preco, String miniatura,
-				   Boolean ativo, ArrayList<Avaliacao> avaliacoes, ArrayList<Imagem> imagens) {
+				   Boolean ativo, Integer prazo, ArrayList<Avaliacao> avaliacoes, ArrayList<Imagem> imagens) {
+		this.id = id;
+		this.usuario = usuario;
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.miniatura = miniatura;
+		this.ativo = ativo;
+		this.prazo = prazo;
+		this.avaliacoes = avaliacoes;
+		this.imagens = imagens;
+	}
+
+	public Anuncio(Integer id, String titulo, String descricao, Double preco, String miniatura, Boolean ativo, Integer prazo, Usuario usuario) {
+		this.id = id;
+		this.usuario = usuario;
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.miniatura = miniatura;
+		this.ativo = ativo;
+		this.prazo = prazo;
+	}
+
+	public Anuncio(Integer id, Usuario usuario, String titulo, String descricao, Double preco, String miniatura, Boolean ativo, ArrayList<Avaliacao> avaliacoes, ArrayList<Imagem> imagens) {
 		this.id = id;
 		this.usuario = usuario;
 		this.titulo = titulo;
@@ -83,6 +108,14 @@ public class Anuncio {
 
 	public void setAtivo(Boolean ativo) {
 		this.ativo = ativo;
+	}
+
+	public Integer getPrazo() {
+		return prazo;
+	}
+
+	public void setPrazo(Integer prazo) {
+		this.prazo = prazo;
 	}
 
 	public ArrayList<Avaliacao> getAvaliacoes() {

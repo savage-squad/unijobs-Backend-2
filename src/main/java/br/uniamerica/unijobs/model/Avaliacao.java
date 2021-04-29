@@ -3,14 +3,24 @@ package br.uniamerica.unijobs.model;
 public class Avaliacao {
 	private Integer id;
 	private int nota;
+	private Anuncio anuncio;
 	
 	public Avaliacao() {
 	
 	}
 
-	public Avaliacao(Integer id, int nota) {
+	public Avaliacao(Integer id, int nota, Anuncio anuncio) {
 		this.id = id;
 		this.nota = nota;
+		this.anuncio = anuncio;
+	}
+
+	public Anuncio getAnuncio() {
+		return anuncio;
+	}
+
+	public void setAnuncio(Anuncio anuncio) {
+		this.anuncio = anuncio;
 	}
 
 	public Integer getId() {
@@ -34,6 +44,7 @@ public class Avaliacao {
 		return "Avaliacao{" +
 				"id=" + id +
 				", nota=" + nota +
+				", anuncio=" + anuncio +
 				'}';
 	}
 }

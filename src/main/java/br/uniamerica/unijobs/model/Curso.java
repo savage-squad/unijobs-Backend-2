@@ -13,6 +13,10 @@ public class Curso {
 		this.nome = nome;
 	}
 
+	public Curso(String nome) {
+		this.nome = nome;
+	}
+
 	public int getId() {
 		return id;
 	}
