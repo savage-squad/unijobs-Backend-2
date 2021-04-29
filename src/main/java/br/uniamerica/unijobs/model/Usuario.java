@@ -18,10 +18,17 @@ public class Usuario extends Pessoa{
 		this.tipoUsuario = tipoUsuario;
 	}
 
-    public Usuario(int id, String email, String nome, String celular, String ra) {
+	public Usuario(String email, String nome, String celular, String ra, TipoUsuario tipoUsuario) {
+		super(nome, celular, ra, null, null);
+		this.email = email;
+		this.tipoUsuario = tipoUsuario;
+	}
+
+    public Usuario(int id, String email, String nome, String celular, String ra, TipoUsuario tipoUsuario) {
 		super(nome, celular, ra, null, null);
 		this.email = email;
 		this.id = id;
+		this.tipoUsuario = tipoUsuario;
     }
 
     public Integer getId() {
@@ -65,5 +72,4 @@ public class Usuario extends Pessoa{
 				", tipoUsuario=" + tipoUsuario +
 				'}';
 	}
-
 }

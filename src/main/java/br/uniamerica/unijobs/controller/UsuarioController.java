@@ -53,6 +53,7 @@ public class UsuarioController {
     @Produces("application/json")
     public Response update(@PathParam("id") Integer id, Usuario usuario){
         UsuarioDao usuarioDao = new UsuarioDao();
+        usuario.setId(id);
         Usuario usuario_atualizado = usuarioDao.update(usuario);
         return Response.ok(new Gson().toJson(usuario_atualizado)).build();
     }
